@@ -1,10 +1,9 @@
 \c cta_dev;
 
-INSERT INTO test (name) VALUES
-('Monday'),
-('Tuesday'),
-('Wednesday'),
-('Thursday'),
-('Friday'),
-('Saturday'),
-('Sunday');
+INSERT INTO soaps (name, smell, ingredients, qualities, type, price, adult, baby) VALUES
+('Natural', 'unscented', 'palm and coconut oil', 'color-free and fragrance-free and is air-dried wire-cut and aged to create a mild long-lasting soap bar', 'glycerin','$4.40', 'yes', 'yes'),
+('Pure', 'unscented', 'coconut oil castor oil, shea butter, jojoba oil, and other natural ingredients',' Ideal for those with sensitive skin and fragrance allergies ', 'glycerin','$7.40', 'yes', 'no'),
+('Citrus & Sea Salt Body Wash', 'Citrus and Sea Salt', 'Coco Glycinate, essential oils, and Himalayan Sea Salt ',' Especially helpful for dry skin, this men & women body wash with the power to gently exfoliate, purify, and moisturize your skin. All while leaving it smelling fresh and fragrant ', 'gel','$20.99', 'yes', 'no'),
+('Organic Baby Wash', 'Vanilla Bean', 'Distilled Water, Castile Soap, Vanilla Bean Essential Oil, Oat Extract', 'Help calm baby before bedtime and features natural oat extract, specially formulated for infants, tear free','liquid', '$12.75','no', 'yes'),
+('African Black Soap', 'unsented', 'Sodium Palm Kernelate, Water, Glycerin, Fragrance (Parfum), Palmitic Acid, Butyrospermum Parkii (shea Butter)*, Helianthus Annuus, (Sunflower) Seed Oil (and) Salix Alba (Willow) Bark Extracts, Saponified Butyrospermum Parkii (Shea Butter), Saponified Cocos Nucifera (Coconut) Oil, Saponified Elaeis Guineensis (Palm) Kernel Oil, Cocoa Pod Ash, Avena Sativa (Oat) Kernel Meal, Carbon, Avena Sativa (oat) Kernel Flour, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Sodium Chloride, Tetrasodium Edta, Tatresodium Etidronate',),
+('Antifungal','palm','sodium palmate, sodium palm kernelate, water, glycderin','Treats fungal tinea pedis(athletes foot),tinea corporis, and tineas cruis', 'medicated', '$14.99','yes','no'),

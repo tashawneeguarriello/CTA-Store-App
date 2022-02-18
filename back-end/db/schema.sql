@@ -5,7 +5,15 @@ CREATE DATABASE cta_dev;
 
 DROP TABLE IF EXISTS test;
 
-CREATE TABLE test (
+CREATE TABLE soaps (
     id SERIAL PRIMARY KEY, 
-    name TEXT
+    name TEXT NOT NULL,
+    smell TEXT NOT NULL,
+    ingredients TEXT,
+    qualities TEXT,
+    type TEXT,
+    price TEXT NOT NUll,
+    adult BOOLEAN,
+    baby BOOLEAN
+
 );
