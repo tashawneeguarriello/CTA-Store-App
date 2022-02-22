@@ -3,17 +3,21 @@ CREATE DATABASE cta_dev;
 
 \c cta_dev;
 
-DROP TABLE IF EXISTS test;
+DROP TABLE IF EXISTS soaps;
 
 CREATE TABLE soaps (
     id SERIAL PRIMARY KEY, 
     name TEXT NOT NULL,
-    smell TEXT NOT NULL,
-    ingredients TEXT,
-    qualities TEXT,
+    image TEXT,
+    smell TEXT,
+    ingredients TEXT NOT NULL,
+    description TEXT,
     type TEXT,
-    price TEXT NOT NUll,
+    price TEXT NOT NULL,
     adult BOOLEAN,
-    baby BOOLEAN
+    baby BOOLEAN,
+    featured BOOLEAN,
+    rating INT,
+    CHECK (rating >= 0 AND rating <=5)
 
 );
