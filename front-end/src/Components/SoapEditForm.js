@@ -112,14 +112,8 @@ const SoapEditForm = () => {
           type="text"
           onChange={handleTextChange}
         />
-        <label htmlFor="type">Type</label>
-        <input
-          id="type"
-          value={soap.type}
-          type="text"
-          onChange={handleTextChange}
-        />
-        <label htmlFor="adult">Adult</label>
+
+        {/* <label htmlFor="adult">Adult</label>
         <input
           id="adult"
           type="checkbox"
@@ -139,7 +133,7 @@ const SoapEditForm = () => {
           type="checkbox"
           //onChange={handleCheckboxChange}
           checked={soap.featured}
-        />
+        /> */}
         <input type="submit" />
       </form>
     </div>
