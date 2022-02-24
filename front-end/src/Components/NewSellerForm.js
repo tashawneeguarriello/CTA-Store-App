@@ -1,6 +1,9 @@
+import HomeNav from "./HomeNav";
+
 function NewSellerForm() {
   return (
     <form>
+      <HomeNav />
       <label>
         Name:
         <input type="text" />
@@ -21,7 +24,10 @@ function NewSellerForm() {
         Comments:
         <input type="text" />
       </label>
+      <input type="submit" />
+      alert("Your file is being uploaded!")
     </form>
   );
 }
-ReactDOM.render(<NewSellerForm />, document.getElementById("root"));
+//ReactDOM.render(<NewSellerForm />, document.getElementById("root"));
+export default NewSellerForm;

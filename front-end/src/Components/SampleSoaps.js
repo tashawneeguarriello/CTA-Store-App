@@ -17,14 +17,14 @@ function Soaps() {
       .catch((error) => console.log("catch", error));
   }, [URL]);
 
-  const soapsDisplay = soaps.map((soap, i) => {
+  const soapsInfo = soaps.map((soap, i) => {
     return <Soap soap={soap} id={soap.id} key={i} />;
   });
 
   return (
     <>
       <DemoNav />
-      <div>{soapsDisplay}</div>
+      <div>{soapsInfo}</div>
     </>
   );
 }

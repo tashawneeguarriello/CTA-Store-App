@@ -33,6 +33,10 @@ function NewSoapForm() {
     });
   };
 
+  const handleCheckboxChange = () => {
+    setSoap({ ...soap, rating: !soap.rating });
+  };
+
   return (
     <>
       <DemoNav />
@@ -112,21 +116,21 @@ function NewSoapForm() {
           <input
             id="adult"
             type="checkbox"
-            //onChange={handleCheckboxChange}
+            onChange={handleCheckboxChange}
             checked={soap.adult}
           />
           <label htmlFor="baby">Baby</label>
           <input
             id="baby"
             type="checkbox"
-            // onChange={handleCheckboxChange}
+            onChange={handleCheckboxChange}
             checked={soap.baby}
           />
           <label htmlFor="featured">Featured</label>
           <input
             id="featured"
             type="checkbox"
-            //onChange={handleCheckboxChange}
+            onChange={handleCheckboxChange}
             checked={soap.featured}
           />
           <input type="submit" />

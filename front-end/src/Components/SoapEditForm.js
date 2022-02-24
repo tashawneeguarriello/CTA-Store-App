@@ -46,8 +46,8 @@ const SoapEditForm = () => {
   };
   console.log(soap);
   return (
-    //<DemoNav />
     <div className="editForm">
+      <DemoNav />
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input
