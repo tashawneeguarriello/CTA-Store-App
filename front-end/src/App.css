@@ -1,0 +1,84 @@
+* {
+  justify-content: center;
+}
+
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  height: 82.5%;
+  color: white;
+  background-image: linear-gradient(#d9dee0, #e5e2e2f3);
+  position: fixed;
+  top: 10%;
+  width: 100%;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+td {
+  justify-content: center;
+  text-align: center;
+}
+
+@import url("https://fonts.google.com/specimen/Permanent+Marker") permanent;
+header {
+  height: 10%;
+  background-color: black;
+  color: white;
+  margin-top: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  font-family: permanent;
+}
+header h1 {
+  margin-top: 0px;
+  padding-top: 15px;
+}
+footer {
+  height: 7.5%;
+  background-color: #181818;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+article {
+  margin-inline: auto;
+  margin-top: 20px;
+}
+th {
+  font-size: 32px;
+}
+td {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.NavBar {
+  background-color: #808080;
+  justify-content: center;
+  margin: auto;
+}
+
+.NavBar button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  background-color: #2c3235;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+td:not(td:first-of-type):hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  font-weight: bold;
+}

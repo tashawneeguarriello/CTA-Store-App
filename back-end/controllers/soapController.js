@@ -39,8 +39,8 @@ soaps.post("/", async (req, res) => {
   console.log("POST to /soaps");
   const newSoap = req.body;
   console.log(newSoap);
-  const soaps = await addNewSoap(newSoap);
-  res.status(200).json(soaps);
+  const addSoap = await addNewSoap(newSoap);
+  res.status(200).json(addSoap);
 });
 
 soaps.delete("/:id", async (request, response) => {
@@ -58,17 +58,17 @@ soaps.delete("/:id", async (request, response) => {
 soaps.put("/:id", async (request, response) => {
   console.log("PUT to /soaps/:id");
   const { id } = request.params;
+  console.log(request.body);
   const soap = request.body;
   console.log(id);
   console.log(soap);
 
-  try {
-    const updated = await updateSoap(soap, id);
-
-    response.status(200).json(updated);
-  } catch (_) {
+  const updated = await updateSoap(soap, id);
+  if (updated.length === 0) {
     response.status(500).json({ error: "server error" });
+    return;
   }
+  response.status(200).json(updated);
 });
 
 module.exports = soaps;

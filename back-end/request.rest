@@ -1,0 +1,49 @@
+GET http://localhost:3333/soaps
+
+###
+
+GET http://localhost:3333/soaps/2
+
+
+###
+
+DELETE http://localhost:3333/soaps/6
+
+###
+
+POST http://localhost:3333/soaps
+Content-Type: application/json
+
+  {
+    "name": "Cucumber Melon",
+    "smell": "Cucumber and Honey Dew Melon",
+    "ingredients": "cucumber, honeydew, soap",
+    "description": "sweet sent, calming and safe for sensative skin",
+    "type": "beauty soap",
+    "price":"15.00",
+    "adult":"yes",
+    "baby":"no",
+    "featured":"yes",
+    "rating":"4",
+    "image": "https://picsum.photos/id/1080/300/300"
+  }
+
+###
+
+PUT http://localhost:3333/soaps/5
+Content-Type: application/json
+
+{
+
+  "name": "Pure",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjR5fEmkHOpb_vY3ptMketQiUyGdygqTAIia5Ii4N19eCZ-HV1a6t1XYvUZXQy86YJClI&usqp=CAU",
+  "smell": "unscented",
+  "ingredients": "coconut oil castor oil, shea butter, jojoba oil, and other natural ingredients",
+  "description": " Ideal for those with sensitive skin and fragrance allergies ",
+  "type": "glycerin",
+  "price": "$7.40",
+  "adult": true,
+  "baby": false,
+  "featured": false,
+  "rating": 4
+}

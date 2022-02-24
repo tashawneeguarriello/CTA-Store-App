@@ -1,6 +1,7 @@
 // DEPENDENCIES
-const cors = require("cors");
 const express = require("express");
+const cors = require("cors");
+const soapController = require("./controllers/soapController");
 
 // CONFIGURATION
 const app = express();
@@ -8,10 +9,11 @@ const app = express();
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json()); // Parse incoming JSON
+app.use("/soaps", soapController);
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Hello, world!");
+  res.send("Welcome to Bee Clean!");
 });
 
 /////////////////////////////////////

@@ -1,30 +1,25 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
-const API = process.env.REACT_APP_API_URL;
+import "./App.css";
+import React from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import Edit from "./Pages/Edit";
+import Index from "./Pages/Index";
+import New from "./Pages/New";
+import Show from "./Pages/Show";
+import Home from "./Pages/Home";
 
-console.log(API);
-function App() {
-  const [days, setDays] = useState([]);
-  useEffect(() => {
-    axios
-      .get(`${API}/test`)
-      .then(
-        (response) => {
-          setDays(response.data);
-        },
-        (error) => console.log("get", error)
-      )
-      .catch((c) => console.warn("catch", c));
-  }, []);
+const App = () => {
   return (
-    <div>
-      <ul>
-        {days.map((day) => (
-          <li key={day.name}>{day.name}</li>
-        ))}
-      </ul>
-    </div>
+    <>
+      {/* <HomeNav /> */}
+      <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route path="/soaps" element={<Index />}></Route>
+        <Route path="/soaps/new" element={<New />}></Route>
+        <Route path="/soaps/:id" element={<Show />}></Route>
+        <Route path="/soaps/:id/edit" element={<Edit />}></Route>
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;

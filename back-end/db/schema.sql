@@ -14,9 +14,9 @@ CREATE TABLE soaps (
     description TEXT,
     type TEXT,
     price TEXT NOT NULL,
-    adult BOOLEAN,
-    baby BOOLEAN,
-    featured BOOLEAN,
+    adult BOOLEAN DEFAULT true,
+    baby BOOLEAN DEFAULT true,
+    featured BOOLEAN DEFAULT true,
     rating INT,
     CHECK (rating >= 0 AND rating <=5)
 
