@@ -1,16 +1,20 @@
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+
 export default function DemoNav() {
   return (
-    <nav className="NavTwo">
+    <div>
       <div>
         <Link to="/soaps">🐝 BeeClean</Link>
       </div>
       <Link to="/soaps/new">
-        <button>Add A Soap </button>
+        <button> New Item</button>
       </Link>
       <h3>
-        <Link to="/">🛍️ShopOCommerce</Link>
+        <Button variant="link">
+          <Link to="/">🛍️ShopOCommerce</Link>
+        </Button>
       </h3>
-    </nav>
+    </div>
   );
 }

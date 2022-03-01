@@ -1,4 +1,5 @@
 import HomeNav from "../Components/HomeNav";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -13,7 +14,11 @@ function Home() {
         {" "}
         <strong>with us</strong>
       </h1>
-      <button>Get Started</button>
+      <h3>
+        <Link to="/newseller/form">
+          <button>GetStarted</button>
+        </Link>
+      </h3>
     </div>
   );
 }

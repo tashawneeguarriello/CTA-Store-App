@@ -33,9 +33,9 @@ function NewSoapForm() {
     });
   };
 
-  const handleCheckboxChange = () => {
-    setSoap({ ...soap, rating: !soap.rating });
-  };
+  // const handleCheckboxChange = () => {
+  //   setSoap({ ...soap, rating: !soap.rating });
+  // };
 
   return (
     <>
@@ -67,7 +67,9 @@ function NewSoapForm() {
           <input
             id="rating"
             value={soap.rating}
-            type="text"
+            type="number"
+            min="0"
+            max="5"
             onChange={handleTextChange}
           />
           <label htmlFor="image">Image</label>
@@ -77,13 +79,13 @@ function NewSoapForm() {
             type="text"
             onChange={handleTextChange}
           />
-          <label htmlFor="image"></label>
+          {/* <label htmlFor="image"></label>
           <input
             id="image"
             value={soap.image}
             type="text"
             onChange={handleTextChange}
-          />
+          /> */}
           {/* <label htmlFor="ingredients">Ingredients</label>
         <input
           id="ingredients"
@@ -105,35 +107,35 @@ function NewSoapForm() {
             type="text"
             onChange={handleTextChange}
           />
-          <label htmlFor="type">Type</label>
+          {/* <label htmlFor="type">Type</label>
           <input
             id="type"
             value={soap.type}
             type="text"
             onChange={handleTextChange}
-          />
+          /> */}
           <label htmlFor="adult">Adult</label>
           <input
             id="adult"
             type="checkbox"
-            onChange={handleCheckboxChange}
+            onChange={handleTextChange}
             checked={soap.adult}
           />
           <label htmlFor="baby">Baby</label>
           <input
             id="baby"
             type="checkbox"
-            onChange={handleCheckboxChange}
+            onChange={handleTextChange}
             checked={soap.baby}
           />
           <label htmlFor="featured">Featured</label>
           <input
             id="featured"
             type="checkbox"
-            onChange={handleCheckboxChange}
+            onChange={handleTextChange}
             checked={soap.featured}
           />
-          <input type="submit" />
+          <button type="submit">Submit</button>
         </form>
       </div>
     </>

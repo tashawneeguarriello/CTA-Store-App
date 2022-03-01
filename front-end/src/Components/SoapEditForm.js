@@ -84,13 +84,7 @@ const SoapEditForm = () => {
           type="text"
           onChange={handleTextChange}
         />
-        <label htmlFor="image"></label>
-        <input
-          id="image"
-          value={soap.image}
-          type="text"
-          onChange={handleTextChange}
-        />
+
         {/* <label htmlFor="ingredients">Ingredients</label>
         <input
           id="ingredients"

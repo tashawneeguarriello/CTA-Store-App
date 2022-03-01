@@ -83,8 +83,6 @@ button:hover i {
 }
 
 .Nav {
-  background-color: aliceblue;
-  background-image: ;
   display: flex;
   justify-content: space-evenly;
   font-size: larger;

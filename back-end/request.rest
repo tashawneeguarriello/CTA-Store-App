@@ -24,7 +24,7 @@ Content-Type: application/json
     "adult":"yes",
     "baby":"no",
     "featured":"yes",
-    "rating":"4",
+    "rating":"6",
     "image": "https://picsum.photos/id/1080/300/300"
   }
 
